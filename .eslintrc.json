@@ -18,8 +18,10 @@
         "js": "always", "json": "always"
       }]
     },
+    
     "ignorePatterns": [
       "dist/",
-      "build/"
+      "build/",
+      "luxon.js"
     ]
   }
