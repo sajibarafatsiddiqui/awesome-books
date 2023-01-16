@@ -19,5 +19,6 @@
   "homepage": "https://github.com/sajibarafatsiddiqui/awesome-books#readme",
   "dependencies": {
     "uuid": "^9.0.0"
-  }
+  },
+  "type": "module"
 }
