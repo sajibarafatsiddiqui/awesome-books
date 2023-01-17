@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
     booksTitle.classList.remove('hide');
   };
   booksLink.addEventListener('click', showListOnly);
-  function showContactOnly() {
+  const showContactOnly = () => {
     booksPage.classList.add('hide');
     formsPage.classList.add('hide');
     booksTitle.classList.add('hide');
@@ -37,7 +37,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 const date = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);
 document.getElementById('date').innerHTML = date;
-const Books = new BookList(JSON.parse(localStorage.getItem('Books')).Books || []);
+let container = []
+if (JSON.parse(localStorage.getItem('Books'))){
+    container = JSON.parse(localStorage.getItem('Books')).Books
+}
+const Books = new BookList(container);
 const bookList = document.createElement('section');
 bookList.className = 'book-list';
 bookList.classList.add('show');
