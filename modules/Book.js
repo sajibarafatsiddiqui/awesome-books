@@ -1,4 +1,3 @@
-
 export default class Book {
   constructor(title, author) {
     this.id = crypto.randomUUID();

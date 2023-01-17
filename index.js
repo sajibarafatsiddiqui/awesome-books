@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     formsPage.classList.add('hide');
     booksTitle.classList.add('hide');
     contactsPage.classList.remove('hide');
-  }
+  };
   contactsLink.addEventListener('click', showContactOnly);
 
   const showFormOnly = () => {
@@ -37,9 +37,9 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 const date = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);
 document.getElementById('date').innerHTML = date;
-let container = []
-if (JSON.parse(localStorage.getItem('Books'))){
-    container = JSON.parse(localStorage.getItem('Books')).Books
+let container = [];
+if (JSON.parse(localStorage.getItem('Books'))) {
+  container = JSON.parse(localStorage.getItem('Books')).Books;
 }
 const Books = new BookList(container);
 const bookList = document.createElement('section');
